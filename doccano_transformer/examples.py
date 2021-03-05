@@ -69,12 +69,12 @@ class NERExample:
                         zip(self.sentence_offsets, self.sentence_offsets[1:])):
                     if start <= label[0] <= label[1] <= end:
                         label_split[i].append(label)
-            lines = ['-DOCSTART- -X- -X- O\n\n']
+            lines = ['-DOCSTART-	O\n\n']
             for tokens, offsets, label in zip(
                     all_tokens, all_token_offsets, label_split):
                 tags = utils.create_bio_tags(tokens, offsets, label)
                 for token, tag in zip(tokens, tags):
-                    lines.append(f'{token} _ _ {tag}\n')
+                    lines.append(f'{token}	{tag}\n')
                 lines.append('\n')
             yield {'user': user, 'data': ''.join(lines)}
 
