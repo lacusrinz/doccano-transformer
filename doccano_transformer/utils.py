@@ -71,7 +71,7 @@ def create_bio_tags(
     tags = []
     for token, token_start in zip(tokens, offsets):
         token_end = token_start + len(token)
-        if i >= n or token_end < labels[i][0]:
+        if i >= n or token_end <= labels[i][0]:
             tags.append('O')
         elif token_start > labels[i][1]:
             tags.append('O')
