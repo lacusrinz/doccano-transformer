@@ -13,10 +13,8 @@ Doccano Transformer supports the following formats:
 
 ## Install
 
-To install `doccano-transformer`, simply use `pip`:
-
 ```bash
-pip install doccano-transformer
+python setup.py install
 ```
 
 ## Examples
