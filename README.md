@@ -1,8 +1,8 @@
 # doccano-transformer
 
 Doccano Transformer helps you to transform an exported dataset into the format of your favorite machine learning library.
-修复了中文标注转化时位置前移的问题
-修改了conll02的输出格式，更好的适应各模型的输入要求
+* 修复了中文标注转化时位置前移的问题
+* 修改了conll02的输出格式，更好的适应各模型的输入要求
 
 ## Supported formats
 
