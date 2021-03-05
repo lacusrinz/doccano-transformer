@@ -1,9 +1,8 @@
 # doccano-transformer
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9fe17d104b644a53a3fe189433d3c797)](https://app.codacy.com/gh/doccano/doccano-transformer?utm_source=github.com&utm_medium=referral&utm_content=doccano/doccano-transformer&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://github.com/doccano/doccano-transformer/workflows/CI/badge.svg)](https://github.com/doccano/doccano-transformer/actions)
-
 Doccano Transformer helps you to transform an exported dataset into the format of your favorite machine learning library.
+修复了中文标注转化时位置前移的问题
+修改了conll02的输出格式，更好的适应各模型的输入要求
 
 ## Supported formats
 
@@ -37,10 +36,6 @@ dataset = read_jsonl(filepath='example.jsonl', dataset=NERDataset, encoding='utf
 dataset.to_conll2003(tokenizer=str.split)
 dataset.to_spacy(tokenizer=str.split)
 ```
-
-## Contribution
-
-We encourage you to contribute to doccano transformer! Please check out the [Contributing to doccano transformer guide](https://github.com/doccano/doccano-transformer/blob/master/CONTRIBUTING.md) for guidelines about how to proceed. 
 
 ## License
 
